@@ -1,9 +1,5 @@
 .idea
-<<<<<<< HEAD
 .DS_Store
 .pdf
 __pycache__
-=======
-.pdf
-.DS_Store
->>>>>>> a4c3d1b2cbf8e86de67a501e6af1e494cad35d6b
+
