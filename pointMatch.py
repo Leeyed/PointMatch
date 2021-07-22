@@ -132,14 +132,14 @@ def calculate_angle_by_acos_C(a, b, c):
 def draw_point_in_code(points, name):
     # points = np.dtype(np.uint8)
     points = np.array(points, dtype=np.int16)
-    mat = np.ones((2000, 1000, 3)) * 255
+    mat = np.ones((1500, 800, 3)) * 255
     for i, p in enumerate(points):
-        x, y = int(p[0] + 800), int(p[1] + 800)
+        x, y = int(p[0] + 500), int(p[1] + 800)
         print(f'{i}, x,y:{x,y}')
         if x==424+800 and y==78+800:
             mat = cv2.putText(mat, str(i), (x//2, y//2), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
         else:
-            mat = cv2.putText(mat, str(i), (x // 2, y // 2), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
+            mat = cv2.putText(mat, str(i), (x //2, y //2), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
     cv2.imshow(name, mat)
     cv2.waitKey(0)
     return
@@ -155,7 +155,7 @@ class subClass_matchPoint:
         if self.__debug:
             from Logger import Logger
             import logging
-            self.__logger = Logger(log_file_name='../log.txt', log_level=logging.DEBUG,
+            self.__logger = Logger(log_file_name='./log.txt', log_level=logging.DEBUG,
                                    logger_name="point_match_logger").get_log()
         if len(stdInf) < 1 and self.__debug:
             self.__logger.info('standard workpiece is none')
