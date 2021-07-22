@@ -154,7 +154,7 @@ class subClass_matchPoint:
         self.__debug = debug
         if self.__debug:
             from Logger import Logger
-            import logging  
+            import logging
             self.__logger = Logger(log_file_name='./log.txt', log_level=logging.DEBUG,
                                    logger_name="point_match_logger").get_log()
         if len(stdInf) < 1 and self.__debug:
