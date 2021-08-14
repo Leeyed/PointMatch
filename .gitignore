@@ -3,5 +3,4 @@
 .pdf
 __pycache__
 
-hugeWorkPiece.py
-pointMatch.py
+*.py
