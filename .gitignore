@@ -2,5 +2,4 @@
 .DS_Store
 .pdf
 __pycache__
-
 *.py
